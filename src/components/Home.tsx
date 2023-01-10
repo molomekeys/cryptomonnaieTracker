@@ -17,7 +17,7 @@ const Home   = ()=> {
     const data =await fetch('https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=EUR    ').then(res=>res.json())
     return data
 }})
-const FilteredElements = data?.coins.filter((val)=>{
+const FilteredElements = data?.coins.filter((val:any)=>{
   if(filterCoins ==''){
    return val
   }
